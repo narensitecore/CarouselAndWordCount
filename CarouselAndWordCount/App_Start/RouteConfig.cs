@@ -14,6 +14,13 @@ namespace CarouselAndWordCount
                 url: "{controller}/{action}/{pageName}",
                 defaults: new { controller = "TestApp", action = "GetPageResult", pageName = UrlParameter.Optional }
             );
+
+
+            routes.MapRoute(
+                name: "DefaultAPI",
+                url: "{controller}/{action}/{pageName}",
+                defaults: new { controller = "API", action = "CarouselContent", pageName = UrlParameter.Optional }
+            );
         }
     }
 }

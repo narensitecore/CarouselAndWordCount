@@ -22,6 +22,8 @@
 @if (Model.Success)
 {
     <input type="hidden" id="wordsModel" name="wordsModel" value="@JsonConvert.SerializeObject(Model?.Words)" />
+    <h2><b>A carousel of images</b></h2>
+    <hr />
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -60,10 +62,12 @@
     </div>
 
     <div class="wordCount">
-        <h2>Word Count: </h2> <div class="wordCountValue">@Html.Raw(Model.WordsCount)</div>
+        <h2><b>A total word count</b> </h2>
+        <hr /><div class="wordCountValue">@Html.Raw(Model.WordsCount)</div>
     </div>
 
-    <h3>Word Count Chart</h3>
+    <h2><b>A graph of the top 10 words and their counts</b></h2>
+    <hr />
     <div class="chartdiv">
 
     </div>

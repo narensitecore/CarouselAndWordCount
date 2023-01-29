@@ -112,12 +112,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\TestAppController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CarouselItem.cs" />
     <Compile Include="Models\PageItem.cs" />
+    <Compile Include="Models\PageItemModel.cs" />
     <Compile Include="Models\PageModel.cs" />
     <Compile Include="Models\Word.cs" />
     <Compile Include="Repository\ITestAppRepository.cs" />
@@ -126,9 +128,6 @@
     <Compile Include="Services\TestApiService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Scripts\TestApp.js" />
-    <Content Include="Static\Images\sld1.jpg" />
-    <Content Include="Static\Images\sld2.jpeg" />
-    <Content Include="Static\Images\sld3.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -152,6 +151,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Static\Images\sld1.jpg" />
+    <Content Include="Static\Images\sld2.jpg" />
+    <Content Include="Static\Images\sld3.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -169,6 +171,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Views\API\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

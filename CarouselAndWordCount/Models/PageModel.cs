@@ -4,6 +4,13 @@ using System.Collections.Generic;
 
 namespace CarouselAndWordCount.Models
 {
+    public class JsonContext
+    {
+        public List<PageItem> PageItems { get; set; } = new List<PageItem>();
+
+        public List<CarouselItem> CarouselItems { get; set; } = new List<CarouselItem>();
+    }
+
     public class PageModel
     {
         [JsonProperty("page")]
