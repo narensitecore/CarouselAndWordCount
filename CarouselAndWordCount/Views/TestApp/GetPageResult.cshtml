@@ -1,0 +1,70 @@
+﻿@using CarouselAndWordCount.Models
+@using Newtonsoft.Json
+
+@model PageModel
+
+@{
+    ViewBag.Title = "Test App";
+    Layout = "~/Views/Shared/CustomLayout.cshtml";
+}
+
+<h1 class="page-header">Welcome to Test Application</h1>
+<form class="testAppForm" id="testAppForm" method="post">
+    <label>Enter Url</label>
+    <input type="text" name="PageUrl" value="" />
+    <input type="submit" value="Submit" class="submit" />
+</form>
+@if (!string.IsNullOrWhiteSpace(Model.FailureMessage))
+{
+    <div class="failure-message">@Html.Raw(Model.FailureMessage)</div>
+}
+
+@if (Model.Success)
+{
+    <input type="hidden" id="wordsModel" name="wordsModel" value="@JsonConvert.SerializeObject(Model?.Words)" />
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            @{
+                var count = 0;
+                if (Model != null && Model.Page.CarouselItems != null && Model.Page.CarouselItems.Any())
+                {
+                    foreach (var carousel in Model.Page.CarouselItems)
+                    {
+                        var activeClass = count == 0 ? "active" : string.Empty;
+                        count++;
+                        <div class="carousel-item @activeClass">
+                            @if (!string.IsNullOrWhiteSpace(carousel.ImagePath))
+                            {
+                                <img src="@carousel.ImagePath" alt="Carousel @count">
+                                <div class="carousel-caption">
+                                    <h3>@Html.Raw(carousel.Title)</h3>
+                                    <p>@Html.Raw(carousel.Description)</p>
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+            }
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div class="wordCount">
+        <h2>Word Count: </h2> <div class="wordCountValue">@Html.Raw(Model.WordsCount)</div>
+    </div>
+
+    <h3>Word Count Chart</h3>
+    <div class="chartdiv">
+
+    </div>
+}
