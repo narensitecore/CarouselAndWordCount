@@ -15,6 +15,6 @@ Run the application in Visual studio and browse the links as the below,
 URLS:
 1. When we ran the application in Visual Studio debug mode URL will be http://localhost:58168
 2. Add API URL http://localhost:58168/api/carouselcontent
-3. hit Submit button to see the results in the page
+3. Hit Submit button to see the results in the page
 
 Note*: Site can be hosted in IIS as well. Based on IIS binding replace the host name URL.
