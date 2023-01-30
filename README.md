@@ -20,3 +20,6 @@ URLS:
 Note*: Site can be hosted in IIS as well. Based on IIS binding replace the host name URL.
 Login Page Screen:
 ![image](https://user-images.githubusercontent.com/123889984/215528539-39e4d1c3-c4f6-4a1f-9026-5af2524e207f.png)
+
+![image](https://user-images.githubusercontent.com/123889984/215528774-52dddebb-f4aa-42c3-9bb7-a6d0ba9dc025.png)
+
