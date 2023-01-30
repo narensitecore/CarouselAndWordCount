@@ -8,12 +8,24 @@
     Layout = "~/Views/Shared/CustomLayout.cshtml";
 }
 
-<h1 class="page-header">Welcome to Test Application</h1>
-<form class="testAppForm" id="testAppForm" method="post">
-    <label>Enter Url</label>
-    <input type="text" name="PageUrl" value="" />
-    <input type="submit" value="Submit" class="submit" />
-</form>
+<div class="card">
+    <h2 class="card-header testapi-header">Welcome to Test Application</h2>
+
+    <h5><b>Important Notes:</b></h5>
+    <ul>
+        <li><b>Sample API URL :</b> hostName/api/carouselcontent</li>
+        <li><b>Example API URL :</b> http://localhost:58168/api/carouselcontent </li>
+
+    </ul>
+    <div class="card-body">
+        <form class="testAppForm" id="testAppForm" method="post">
+            <label>Enter Url<b style="color:red">*</b></label>
+            <input type="text" name="PageUrl" value="" required/>
+            <input type="submit" value="Submit" class="submit btn-primary btn-page-url" />
+        </form>
+    </div>
+</div>
+
 @if (!string.IsNullOrWhiteSpace(Model.FailureMessage))
 {
     <div class="failure-message">@Html.Raw(Model.FailureMessage)</div>

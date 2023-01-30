@@ -112,11 +112,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\TestAppController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\APIHelpers.cs" />
     <Compile Include="Models\CarouselItem.cs" />
     <Compile Include="Models\PageItem.cs" />
     <Compile Include="Models\PageItemModel.cs" />
@@ -127,6 +129,8 @@
     <Compile Include="Services\ITestApiService.cs" />
     <Compile Include="Services\TestApiService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\main.css" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\TestApp.js" />
   </ItemGroup>
   <ItemGroup>
