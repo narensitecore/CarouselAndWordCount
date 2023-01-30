@@ -17,8 +17,7 @@ namespace CarouselAndWordCount
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*",
-                        "~/Scripts/TestApp.js",
-                        "~/Scripts/main.js"));
+                        "~/Scripts/TestApp.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
@@ -26,8 +25,7 @@ namespace CarouselAndWordCount
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/Carousel.css",
-                      "~/Content/main.css"));
+                      "~/Content/Carousel.css"));
         }
     }
 }
